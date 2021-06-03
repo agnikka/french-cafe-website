@@ -1,0 +1,1104 @@
+/* ==========================================================================
+GENERAL
+========================================================================== */
+
+
+body {
+    margin: 0;
+    background-color: #f7f7f7;
+    font-family: 'Archivo', sans-serif;
+    color: #5c5b5b;
+}
+
+.center {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #f7f7f7;
+}
+
+.mrcoffee-logo {
+    width: 16%;
+    display: block;
+    margin: 8px auto;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+
+/* ==========================================================================
+NAVIGATION
+========================================================================== */
+
+
+/* Header navigation
+   ========================================================================== */
+
+.header-menu {
+    height: 80px;
+    background-color: #667385;
+    margin: 0;
+    width: 100%;
+}
+
+.full-logo-white {
+    height: 60px;
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 40px;
+}
+
+.header-menu ul {
+    float: right;
+    margin-right: 50px;
+}
+
+.header-menu li {
+    display: inline-block;
+    margin: 10px 30px 0 0;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+
+/* Footer navigation
+   ========================================================================== */
+
+.footer-menu {
+    height: 150px;
+    margin: 0;
+    background-color: #667385;
+    color: #fff;
+    position: relative;
+}
+
+.graphic-logo-white {
+    height: 80px;
+    margin-left: 50px;
+    margin-top: 35px;
+}
+
+.socialmedia-footer {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.socialmedia-invitation {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.socialmedia-links {
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+.socialmedia-link {
+    display: inline-block;
+}
+
+.socialmedia-logo {
+    height: 28px;
+}
+
+
+/* ==========================================================================
+HOMEPAGE
+========================================================================== */
+
+
+.container-homepage {
+    width: 86%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero {
+    position: relative;
+}
+
+.homepage-title {
+    width: 100%;
+    text-transform: uppercase;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 40px;
+    font-weight: 900;
+    text-shadow: 2px 2px 8px #555;
+    font-family: 'Lato', sans-serif;    
+    letter-spacing: 1px;
+}
+
+.mr-coffee-salle {
+    width: 100%;
+    display: block;
+}
+
+.three-things-title {
+    margin: 100px 0;
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 1.5em;
+    letter-spacing: 0.5px;
+    font-family: 'Noto Sans JP', sans-serif;    
+}
+
+.three-things-div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.grey-background-div {
+    background-color: #b5bcc2;
+    width: 31%;
+    height: 420px;
+    color: #fff;
+    border: 1px solid #BFBFBF;
+    box-shadow: 0 2px 3px 2px #919191;
+}
+
+.three-things-icon {
+    height: 120px;
+    margin: 50px auto 0 auto;
+    display: block;
+}
+
+.grey-background-div h3 {
+    font-size: 25px;
+    text-shadow: 2px 2px 2px #868686;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 900;
+    margin-top: 15px;
+}
+
+.grey-background-div p {
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 1.5em;
+}
+
+.button {
+    display: block;
+    margin: 100px auto;
+    background-color: #707d91;
+    border: 1px solid #bFbFbF;
+    width: 350px;
+    height: 80px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 700;
+    box-shadow: 0 1px 2px 1px #919191;
+}
+
+.program-h2 {
+    font-size: 42px;
+    font-weight: 900;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 0.5px; 
+    margin-bottom: 70px;
+}
+
+.open-div {
+    position: relative;
+    height: 110px;
+    margin-left: 50px;
+    margin-bottom: 70px;
+}
+
+.icon-open {
+    display: inline-block;
+    height: 110px;
+}
+
+.open-div h3 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    margin-left: 40px;
+    font-family: 'Noto Sans JP', sans-serif;    
+}
+
+.events-div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.events-div-item {
+    width: 46%;
+    font-size: 23px;
+    font-weight: 800;
+    line-height: 1.5em;
+    font-family: 'Noto Sans JP', sans-serif;    
+    letter-spacing: 1px;
+    margin-bottom: 70px;
+}
+
+.events-div-item h4 {
+    font-weight: 800;
+    margin-bottom: 70px;
+}
+
+.events-div-item p {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.medium {
+    font-weight: 500;
+}
+
+.ending-smaller {
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-bottom: 110px;
+}
+
+.ending-bigger {
+    font-size: 32px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    line-height: 1.5em;
+    margin-bottom: 70px;
+    margin-left: 250px;
+    margin-right: 250px;
+}
+
+.ending-bigger a {
+    color: #5c5b5b;
+}
+
+
+/* ==========================================================================
+ABOUT
+========================================================================== */
+
+
+.container-about {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.about-div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-bottom: 150px;
+}
+
+.about-div img {
+    width: 40%;
+    display: inline-block;
+}
+
+.about-div h2 {
+    font-size: 43px;
+    font-weight: 500;
+    line-height: 1.3em;
+    letter-spacing: 1px;
+    font-family: 'Lato', sans-serif;
+    margin-top: 0;
+    margin-bottom: 60px;
+}
+
+.about-div p {
+    font-size: 23px;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 1.2px;
+    line-height: 1.5em;
+    font-weight: 500;
+}
+
+.about-div-text-1 {
+    width: 47%;
+    margin-top: 100px;
+}
+
+.about-div-text-1 p {
+    margin-bottom: 40px;
+}
+
+.about-div-text-2 {
+    width: 49%;
+    margin-right: 50px;
+}
+
+.about-div-text-2 p {
+    margin-top: 30px;
+}
+
+
+/* ==========================================================================
+CONTACT
+========================================================================== */
+
+
+.contact-title {
+    font-size: 40px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-family: 'Lato', sans-serif;
+}
+
+.contact-map {
+    display: block;
+    width: 55%;
+    margin: 120px auto;
+}
+
+.contact-text {
+    width: 55%;
+    margin: 80px auto;
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.5em;
+    font-family: 'Lato', sans-serif;
+}
+
+.contact-company-name {
+    font-family: 'Noto Sans JP', sans-serif;    
+    font-weight: 900;
+    font-size: 24px;
+    letter-spacing: 0.5px;
+    margin-bottom: 0;
+}
+
+.contact-text p {
+    margin-bottom: 40px;
+    margin-top: 0;
+}
+
+
+/* ==========================================================================
+MEDIUM DEVICES
+========================================================================== */
+
+
+@media screen and (max-width: 991.98px) {
+
+
+/* Navigation for medium devices
+   ========================================================================== */
+
+
+/* Header navigation for medium devices */
+
+.full-logo-white {
+    height: 50px;
+    margin-top: 15px;
+}
+
+.header-menu ul {
+    margin-right: 30px;
+    margin: 20px 20px 0 0;
+}
+
+
+/* Footer navigation for medium devices */
+
+.footer-menu {
+    height: 120px;
+}
+
+.graphic-logo-white {
+    height: 60px;
+    margin-top: 25px;
+}
+
+.socialmedia-invitation {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+
+/* Homepage for medium devices
+   ========================================================================== */
+
+
+.homepage-title {
+    font-size: 30px;
+}
+
+.three-things-title {
+    margin: 50px 0;
+    font-size: 20px;
+}
+
+.three-things-div {
+    display: block;
+}
+
+.grey-background-div {
+    display: block;
+    width: 80%;
+    height: 300px;
+    margin: 0 auto 20px auto;
+}
+
+.three-things-icon {
+    height: 60px;
+    margin: 30px auto 0 auto;
+}
+
+.grey-background-div h3 {
+    font-size: 20px;
+}
+
+.grey-background-div p {
+    font-size: 15px;
+}
+
+.button {
+    margin: 70px auto;
+    width: 220px;
+    height: 50px;
+    font-size: 15px;
+}
+
+.program-h2 {
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.open-div {
+    height: 100px;
+    margin-left: 40px;
+    margin-bottom: 60px;
+}
+
+.icon-open {
+    height: 100px;
+}
+
+.open-div h3 {
+    font-size: 18px;
+}
+
+.events-div-item {
+    width: 50%;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+.events-div-item h4 {
+    margin-bottom: 30px;
+}
+
+.events-div-item p {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.ending-smaller {
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.ending-bigger {
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+
+/* About for medium devices
+   ========================================================================== */
+
+
+.about-div {
+    display: block;
+    margin-bottom: 50px;
+}
+
+.about-div img {
+    width: 100%;
+    display: block;
+}
+
+.about-div h2 {
+    font-size: 25px;
+    margin-bottom: 40px;
+}
+
+.about-div p {
+    font-size: 20px;
+}
+
+.about-div-text-1 {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.about-div-text-2 {
+    width: 100%;
+    margin-top: 50px;
+    margin-right: 0;
+}
+
+
+/* Contact for medium devices
+   ========================================================================== */
+
+
+.contact-title {
+    font-size: 25px;
+}
+
+.contact-map {
+    width: 70%;
+    margin: 60px auto;
+}
+
+.contact-text {
+    width: 70%;
+    margin: 60px auto;
+    font-size: 18px;
+}
+
+.contact-company-name {
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+.contact-text p {
+    margin-bottom: 30px;
+    margin-top: 0;
+}
+
+
+}
+
+
+/* ==========================================================================
+SMALL DEVICES
+========================================================================== */
+
+
+@media screen and (max-width: 767.98px) {
+
+
+/* Navigation for small devices
+   ========================================================================== */
+
+
+/* Header navigation for small devices */
+
+.header-menu {
+    height: 60px;
+}
+
+.full-logo-white {
+    height: 35px;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.header-menu ul {
+    margin-right: 10px;
+}
+
+.header-menu li {
+    font-size: 12px;
+}
+
+
+/* Footer navigation for small devices */
+
+.footer-menu {
+    height: 90px;
+}
+
+.graphic-logo-white {
+    height: 50px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.socialmedia-invitation {
+    font-size: 12px;
+}
+
+
+/* Homepage for small devices
+   ========================================================================== */
+
+
+.container-homepage {
+    width: 95%;
+}
+
+.mr-coffee-salle {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.three-things-title {
+    font-size: 20px;
+    margin: 30px 0;
+}
+
+.three-things-div {
+    display: block;
+}
+
+.grey-background-div {
+    display: block;
+    width: 80%;
+    height: 300px;
+    margin: 0 auto 20px auto;
+}
+
+.three-things-icon {
+    height: 60px;
+    margin: 30px auto 0 auto;
+}
+
+.grey-background-div h3 {
+    font-size: 20px;
+}
+
+.grey-background-div p {
+    font-size: 15px;
+}
+
+.button {
+    margin: 50px auto;
+    width: 180px;
+    height: 50px;
+    font-size: 15px;
+}
+
+.program-h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.open-div {
+    height: 50px;
+    margin-bottom: 50px;
+}
+
+.icon-open {
+    height: 50px;
+    margin-top: 10px;
+}
+
+.open-div h3 {
+    font-size: 15px;
+    margin-left: 30px;
+}
+
+.events-div-item {
+    width: 50%;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.events-div-item h4 {
+    margin-bottom: 30px;
+}
+
+.events-div-item p {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.ending-smaller {
+    font-size: 15px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.ending-bigger {
+    font-size: 20px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+
+/* About for small devices
+   ========================================================================== */
+
+
+.about-div {
+    margin-bottom: 50px;
+    display: block;
+}
+
+.about-div img {
+    width: 100%;
+    display: block;
+}
+
+.about-div h2 {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+    
+.about-div p {
+    font-size: 15px;
+}
+
+.about-div-text-1 {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+.about-div-text-1 p {
+    margin-bottom: 40px;
+}
+
+.about-div-text-2 {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+.about-div-text-2 p {
+     margin-top: 30px;
+}
+
+
+/* Contact for small devices
+   ========================================================================== */
+
+
+.contact-title {
+    font-size: 20px;
+}
+
+.contact-map {
+    width: 80%;
+    margin: 60px auto;
+}
+
+.contact-text {
+    margin: 40px 60px;
+    font-size: 15px;
+}
+
+.contact-company-name {
+    font-size: 15px;
+}
+
+.contact-text p {
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+
+}
+
+
+/* ==========================================================================
+EXTRA SMALL DEVICES
+========================================================================== */
+
+
+@media screen and (max-width: 575.98px) {
+
+
+/* General for extra small devices
+   ========================================================================== */
+
+
+.mrcoffee-logo { 
+    width: 25%;
+}
+
+
+/* Navigation for extra small devices
+   ========================================================================== */
+
+
+/* Header navigation for extra small devices */
+
+.header-menu {
+    height: 85px;
+}
+
+.full-logo-white {
+    height: 30px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.header-menu ul {
+    margin: 0 10px 10px 0;
+}
+
+.header-menu li {
+    margin: 10px 10px 0 0;
+    font-size: 10px;
+    display: block;
+}
+
+
+/* Footer navigation for extra small devices */
+
+.footer-menu {
+    height: 100px;
+}
+
+.graphic-logo-white {
+    height: 30px;
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+.socialmedia-invitation {
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.socialmedia-links {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+.socialmedia-logo {
+    height: 22px;
+}
+
+
+/* Homepage for extra small devices
+   ========================================================================== */
+
+
+.container-homepage {
+    width: 100%;
+}
+
+.mr-coffee-salle {
+    width: 100%;
+}
+
+.homepage-title {
+    font-size: 20px;
+    top: 20%;
+    width: 90%;
+}
+
+.three-things-title {
+    font-size: 15px;
+    margin: 20px 0;
+}
+
+.three-things-div {
+    display: block;
+}
+
+.three-things-icon {
+    height: 30px;
+    margin: 20px auto 0 auto;
+}
+
+.grey-background-div {
+    display: block;
+    width: 80%;
+    height: 250px;
+    margin: 0 auto 20px auto;
+}
+
+.grey-background-div h3 {
+    font-size: 15px;
+}
+
+.grey-background-div p {
+    font-size: 10px;
+}
+
+.button {
+    margin: 30px auto;
+    width: 120px;
+    height: 40px;
+    font-size: 10px;
+}
+
+.program-h2 {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.open-div {
+    height: 70px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    position: unset;
+}
+
+.open-div h3 {
+    font-size: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    text-align: center;
+    position: unset;
+}
+
+.icon-open {
+    height: 40px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.events-div {
+    display: block;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.events-div-item {
+    display: block;
+    font-size: 10px;
+    width: 90%;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.events-div-item h4 {
+    margin-bottom: 10px;
+}
+
+.events-div-item p {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+.ending-smaller {
+    font-size: 10px;
+    margin: 30px;
+}
+
+.ending-bigger {
+    font-size: 12px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+
+/* About for extra small devices
+   ========================================================================== */
+
+
+.container-about {
+    width: 100%;
+}
+
+.about-div {
+    margin-bottom: 50px;
+    display: block;
+}
+
+.about-div img {
+    width: 100%;
+    display: block;
+}
+
+.about-div h2 {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.about-div p {
+    font-size: 15px;
+}
+
+.about-div-text-1 {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+.about-div-text-1 p {
+    margin-bottom: 40px;
+}
+
+.about-div-text-2 {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+.about-div-text-2 p {
+     margin-top: 30px;
+}
+
+
+/* Contact for extra small devices
+   ========================================================================== */
+
+
+.contact-title {
+    font-size: 20px;
+}
+
+.contact-map {
+    width: 100%;
+    margin: 30px auto;
+}
+
+.contact-text {
+    width: 90%;
+    margin: 30px auto;
+    font-size: 15px;
+}
+
+.contact-company-name {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.contact-text p {
+    margin-bottom: 10px;
+}
+
+
+}
