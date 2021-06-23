@@ -22,6 +22,8 @@
     <meta name="description" content="Super café à situer dans le 14ème arrondissement de Paris à l'emplacement de Jules Guesde. 
     Accessible en transports en commun et en voiture.">
 
+    <script defer src="src/form.js"></script>
+
 </head>
 
 
@@ -50,6 +52,47 @@
 
 
 <img class="mrcoffee-logo" src="assets/logo_mrcoffee.png" alt="logo de Mr.Coffee noir">
+
+
+<!-- contact form -->
+<div class="form-section">
+
+    <h2 class="contact-title form-title center">Dites nous tout !</h2>
+
+    <form> <!--action="/contact.html" method="GET">  add form handler? -->
+    
+        <label class="form-label" for="fname">Nom *</label><br>
+            <input class="form-item" type="text" id="fname" name="fname" required><br>
+        <label for="lname">Prénom *</label><br>
+            <input class="form-item" type="text" id="lname" name="lname" required><br>
+        <label for="telephone">Téléphone</label><br>
+            <input class="form-item" type="tel" id="telephone" name="telephone"><br>
+        <label for="email">Adresse mail *</label><br>
+            <input class="form-item" type="email" id="email" name="email" required><br>
+            <!-- pattern="/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/" -->
+        <label for="message">Message *</label><br>
+            <textarea class="form-item" id="message" name="message" placeholder="Tapez votre message ici" required></textarea><br>
+        <input data-modal-target="#modal" class="button form-button uppercase" type="submit" value="Envoyer">
+    
+    </form>
+</div><!-- /contact form -->
+
+
+<div class="modal" id="modal">
+    <button data-close-button class="close-modal-button-x">&times;</button>
+    <img class="modal-logo" src="assets/logo_dark.png" alt="logo de Mr.Coffee noir">
+
+    <div class="modal-text">
+        <div class="modal-header center">
+            <p class="uppercase">Merci</p>
+            <p>Votre message a bien été envoyé !</p>
+        </div>
+        <p class="modal-smaller-text">Nous essaierons d’y répondre au mieux dans les plus brefs délais. À bientot chez Mr.Coffee</p>
+    </div> <!-- /modal-text -->
+    <button data-close-button class="close-modal-button-fermer button uppercase">FERMER</button>
+</div><!-- modal -->
+
+<div id="overlay"></div>
 
 
 <h1 class="contact-title center">

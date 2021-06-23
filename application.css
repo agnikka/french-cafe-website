@@ -5,13 +5,17 @@ GENERAL
 
 body {
     margin: 0;
-    background-color: #f7f7f7;
+    background-color: #f5f5f5;
     font-family: 'Archivo', sans-serif;
     color: #5c5b5b;
 }
 
 .center {
     text-align: center;
+}
+
+.uppercase {
+    text-transform: uppercase;
 }
 
 a {
@@ -40,7 +44,7 @@ NAVIGATION
 
 .header-menu {
     height: 80px;
-    background-color: #667385;
+    background-color: #6a7b8b;
     margin: 0;
     width: 100%;
 }
@@ -72,7 +76,7 @@ NAVIGATION
 .footer-menu {
     height: 150px;
     margin: 0;
-    background-color: #667385;
+    background-color: #6a7b8b;
     color: #fff;
     position: relative;
 }
@@ -132,7 +136,6 @@ HOMEPAGE
 
 .homepage-title {
     width: 100%;
-    text-transform: uppercase;
     position: absolute;
     top: 10%;
     left: 50%;
@@ -360,6 +363,134 @@ ABOUT
 CONTACT
 ========================================================================== */
 
+.form-title {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.form-section {
+    width: 55%;
+    margin: auto;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.form-item {
+    display: block;
+    width: 100%;
+    background-color: #c4cad0;
+    border: none;
+    margin-top: 0;
+}
+
+input[type=text],
+input[type=tel],
+input[type=email] {
+    height: 45px;
+}
+
+textarea {
+    height: 100px;
+}
+
+textarea::placeholder {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 900;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.form-button {
+    margin-top: 40px;
+}
+
+.modal {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #6a7b8b;
+    background-color: #fff;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    /* overflow: auto; */
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.close-modal-button-x {
+    float: right;
+    height: 50px;
+    width: 50px;
+    font-size: 40px;
+    border: none;
+    background: none;
+    color: #6a7b8b;
+}
+
+.close-modal-button-x:hover,
+.close-modal-button-x:focus {
+    color: #000;
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+.modal-logo {
+    height: 120px;
+    float: left;
+    margin-top: 60px;
+    margin-left: 100px;
+}
+
+.modal-text {
+    width: 60%;
+    margin: 100px auto;
+    font-weight: 800;
+}
+
+.modal-header {
+    font-size: 40px;
+    margin: 100px auto;
+}
+
+.modal-smaller-text {
+    font-size: 22px;
+    letter-spacing: 1.2px;
+
+}
+
+.close-modal-button-fermer {
+    margin-bottom: 50px;
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+
+}
 
 .contact-title {
     font-size: 40px;
