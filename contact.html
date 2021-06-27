@@ -6,6 +6,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <link rel="stylesheet" href="application.css">
 
@@ -17,7 +18,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-   
+    <script src="https://kit.fontawesome.com/fcadb3a1ec.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">  
     <title>Mr.Coffee - bon café à Paris</title>
     <meta name="description" content="Super café à situer dans le 14ème arrondissement de Paris à l'emplacement de Jules Guesde. 
     Accessible en transports en commun et en voiture.">
@@ -54,28 +56,59 @@
 <img class="mrcoffee-logo" src="assets/logo_mrcoffee.png" alt="logo de Mr.Coffee noir">
 
 
-<!-- contact form -->
-<div class="form-section">
+<!-- form-section -->
 
+<div class="form-section">
     <h2 class="contact-title form-title center">Dites nous tout !</h2>
 
-    <form> <!--action="/contact.html" method="GET">  add form handler? -->
-    
-        <label class="form-label" for="fname">Nom *</label><br>
+<!-- contact form -->
+    <!-- <div id="error"></div> -->
+    <form class="form" id="form" action="" method="get"> <!-- TODO: action="/contact.html"? add form handler? -->
+
+    <!--TODO: Refactor without using br? -->
+    <!--TODO: Refactor using fa icons? -->
+
+        <div class="form-control">
+            <label class="form-label" for="fname">Nom *</label><br>
             <input class="form-item" type="text" id="fname" name="fname" required><br>
-        <label for="lname">Prénom *</label><br>
+			<!-- <i class="fas fa-check-circle"></i>
+			<i class="fas fa-exclamation-circle"></i> -->
+			<small>Error message</small>
+        </div>
+        <div class="form-control">
+            <label for="lname">Prénom *</label><br>
             <input class="form-item" type="text" id="lname" name="lname" required><br>
-        <label for="telephone">Téléphone</label><br>
+			<!-- <i class="fas fa-check-circle"></i>
+			<i class="fas fa-exclamation-circle"></i> -->
+			<small>Error message</small>
+        </div>
+        <div class="form-control">
+            <label for="telephone">Téléphone</label><br>
             <input class="form-item" type="tel" id="telephone" name="telephone"><br>
-        <label for="email">Adresse mail *</label><br>
-            <input class="form-item" type="email" id="email" name="email" required><br>
-            <!-- pattern="/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/" -->
-        <label for="message">Message *</label><br>
-            <textarea class="form-item" id="message" name="message" placeholder="Tapez votre message ici" required></textarea><br>
+			<!-- <i class="fas fa-check-circle"></i>
+			<i class="fas fa-exclamation-circle"></i> -->
+			<small>Error message</small>
+        </div>
+         <div class="form-control">
+            <label for="email">Adresse mail *</label><br>
+            <input class="form-item" type="email" id="email" name="email" required 
+            pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$'>
+            <br>
+			<!-- <i class="fas fa-check-circle"></i>
+			<i class="fas fa-exclamation-circle"></i> -->
+			<small>Error message</small>
+        </div>
+        <div class="form-control">
+            <label for="message">Message *</label><br>
+            <textarea class="form-item" id="message" name="message" placeholder="Tapez votre message ici" required ></textarea><br>
+			<!-- <i class="fas fa-check-circle"></i>
+			<i class="fas fa-exclamation-circle"></i> -->
+			<small>Error message</small>
+        </div>
         <input data-modal-target="#modal" class="button form-button uppercase" type="submit" value="Envoyer">
     
-    </form>
-</div><!-- /contact form -->
+    </form><!-- /contact form -->
+</div><!-- form-section -->
 
 
 <div class="modal" id="modal">

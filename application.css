@@ -213,6 +213,7 @@ HOMEPAGE
     font-size: 25px;
     font-weight: 700;
     box-shadow: 0 1px 2px 1px #919191;
+    cursor: pointer;
 }
 
 .program-h2 {
@@ -392,22 +393,63 @@ input[type=text],
 input[type=tel],
 input[type=email] {
     height: 45px;
+    padding-left: 10px;
+    font-size: 20px;
 }
 
 textarea {
     height: 100px;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-size: 20px;
 }
 
 textarea::placeholder {
     color: #fff;
     font-size: 16px;
     font-weight: 900;
-    padding-top: 10px;
-    padding-left: 10px;
 }
+
+/* .form-control i {
+	visibility: hidden;
+	position: absolute;
+} */
+
+.form-control small {
+	color: #e74c3c;
+	visibility: hidden;
+}
+
+.form-control.success input,
+.form-control.success textarea {
+    border: 2px solid #12903E;
+}
+
+.form-control.error input,
+.form-control.error textarea {
+    border: 2px solid #BF2F1F;
+}
+
+
+/* .form-control.success i.fa-check-circle {
+	color: #12903E;
+	visibility: visible;
+} */
+
+/* .form-control.error i.fa-exclamation-circle {
+	color: #BF2F1F;
+	visibility: visible;
+} */
+
+.form-control.error small {
+	visibility: visible;
+    color: #BF2F1F;
+}
+
 
 .form-button {
     margin-top: 40px;
+    cursor: pointer;
 }
 
 .modal {
@@ -437,6 +479,7 @@ textarea::placeholder {
     border: none;
     background: none;
     color: #6a7b8b;
+    cursor: pointer;
 }
 
 .close-modal-button-x:hover,
@@ -472,6 +515,7 @@ textarea::placeholder {
 
 .close-modal-button-fermer {
     margin-bottom: 50px;
+    cursor: pointer;
 }
 
 #overlay {
