@@ -430,7 +430,6 @@ textarea::placeholder {
     border: 2px solid #BF2F1F;
 }
 
-
 /* .form-control.success i.fa-check-circle {
 	color: #12903E;
 	visibility: visible;
@@ -445,7 +444,6 @@ textarea::placeholder {
 	visibility: visible;
     color: #BF2F1F;
 }
-
 
 .form-button {
     margin-top: 40px;
@@ -464,7 +462,6 @@ textarea::placeholder {
     top: 50%;
     transform: translate(-50%, -50%) scale(0);
     transition: 200ms ease-in-out;
-    /* overflow: auto; */
 }
 
 .modal.active {
@@ -533,7 +530,6 @@ textarea::placeholder {
 #overlay.active {
     opacity: 1;
     pointer-events: all;
-
 }
 
 .contact-title {

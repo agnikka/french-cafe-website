@@ -2,7 +2,7 @@
 // Modal according to: https://www.youtube.com/watch?v=MBaw_6cPmAw
 // TODO: Try other way to encode the modal: https://www.w3schools.com/howto/howto_css_modals.asp
 // and: https://www.youtube.com/watch?v=QUYjY9ApDgE
-// TODO 2: Add checkmarks like here: https://www.youtube.com/watch?v=rsd4FNGTRBw&t=221s
+// TODO 2: Add marks like here: https://www.youtube.com/watch?v=rsd4FNGTRBw&t=221s
 
 const form = document.querySelector('#form');
 const inputName = document.querySelector('#fname');
@@ -10,11 +10,11 @@ const inputLastName = document.querySelector('#lname');
 const inputTelephone = document.querySelector('#telephone');
 const inputEmail = document.querySelector('#email');
 const inputMessage = document.querySelector('#message');
-// const errorMessElem = document.querySelector('#error');
 
 // Modal
+
 function processModal() {
-  const openModalButton = document.querySelector('[data-modal-target');
+  const openModalButton = document.querySelector('[data-open-button');
   const closeModalButtons = document.querySelectorAll('[data-close-button');
   const overlay = document.getElementById('overlay');
 
@@ -29,7 +29,7 @@ function processModal() {
   }
 
   openModalButton.addEventListener('click', () => {
-    const modal = document.querySelector(openModalButton.dataset.modalTarget);
+    const modal = document.querySelector('#modal');
     openModal(modal);
   });
 
@@ -42,6 +42,9 @@ function processModal() {
     button.addEventListener('click', () => {
       const modal = button.closest('.modal');
       closeModal(modal);
+      form.reset();
+      // form.reload();
+      // document.querySelectorAll('form-control').removeClass('form-control success');
     });
   });
 }
@@ -117,7 +120,8 @@ function checkInputs() {
 
   if (errorMessages.length === 0) {
     processModal();
-    console.log(nameValue, lastNameValue, telephoneValue, emailValue, messageValue);
+    console.log(`Name: ${nameValue}, Last Name: ${lastNameValue}, 
+    Telephone: ${telephoneValue}, Email: ${emailValue}, Message: ${messageValue}`);
   }
 }
 
@@ -156,7 +160,8 @@ form.addEventListener('submit', (e) => {
 // function processForm() {
 // const regexTelephone = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/;
 // const regexEmail =
-// /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+// /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.
+// )|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
 
 // if (userName === '') {
 //   window.alert('Please enter your name.');
@@ -201,7 +206,8 @@ form.addEventListener('submit', (e) => {
 
 // var regexPhone = /^(1?(-?\d{3})-?)?(\d{3})(-?\d{4})$/;
 // var regexEmail =
-// /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+// /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)
+// |(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
 
 // if((!regexPhone.test(phoneValue)) ||(!regexEmail.test(emailValue))) {
 //   nameErr = document.getElementById("name_errormsg");
