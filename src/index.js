@@ -4,54 +4,114 @@ const crypto = require('crypto');
 const data = require('./data');
 
 const app = express();
-// app.use(express.json());
+app.use(express.json());
 const port = 3000;
-const users = data.users;
-const schedules = data.schedules;
+const { users } = data; // previously: const users = data.users - fixed by eslint
+const { schedules } = data; // previously: const schedules = data.schedules - fixed by eslint
+
+// Get the main page
 
 app.get('/', (req, res) => {
-  res.send('Welcome to our schedule website');
+  res.json({ message: 'Welcome to our schedule website' });
 });
+
+// Get all users
 
 app.get('/users', (req, res) => {
-  res.send(users);
+  res.json(users);
 });
 
-app.get('/users/:id', (req, res) => {
-  const id = Number(req.params.id);
-  if (users[id] === undefined) {
-    res.status(404).send(`Incorrect user id: ${id}`);
+// Get a specific user
+
+app.get('/users/:userId', (req, res) => {
+  const userId = Number(req.params.userId);
+  if (users[userId] === undefined) {
+    res.status(404).send(`Incorrect user id: ${userId}`);
   }
-  res.send(users[id]);
+  res.json(users[userId]);
 });
 
-app.get('/users/:id/schedules', (req, res) => {
-  const id = Number(req.params.id);
+// Post a new user with sha-256 hashed password
+
+app.post('/users', (req, res) => {
+  const newUser = {
+    firstname: req.body.firstname,
+    lastname: req.body.lastname,
+    email: req.body.email,
+    password: req.body.password,
+  };
+
+  if (!newUser.firstname || !newUser.lastname || !newUser.email || !newUser.password) {
+    res.status(404).json('Please fill out all required fields');
+  }
+
+  // newUser.password = crypto.createHash('sha256')
+  //   .update('newUser.password')
+  //   .digest();
+
+  function hashPassword() {
+    return crypto.createHash('sha256')
+      .update('newUser.password')
+      .digest('hex');
+  }
+
+  hashPassword(newUser.password);
+  users.push(newUser);
+  res.json(newUser);
+});
+
+// GET schedules for specific user
+
+app.get('/users/:userId/schedules', (req, res) => {
+  const userId = Number(req.params.userId);
   const usersSchedules = [];
   schedules.forEach((item) => {
-    if (item.user_id === id) {
+    if (item.user_id === userId) {
       usersSchedules.push(item);
     }
   });
-  if (users[id] === undefined) {
-    res.status(404).send(`Incorrect user id: ${id}`);
+  if (users[userId] === undefined) {
+    res.status(404).json(`Incorrect user id: ${userId}`);
   }
   if (usersSchedules.length === 0) {
-    res.send('No schedules for this user');
+    res.json('No schedules for this user');
   }
-  res.send(usersSchedules);
+  res.json(usersSchedules);
 });
+
+// GET all schedules
 
 app.get('/schedules', (req, res) => {
-  res.send(schedules);
+  res.json(schedules);
 });
 
-// app.post('/schedules', (req, res) => {
-// });
+// GET a specific schedule
+
+app.get('/schedules/:scheduleId', (req, res) => {
+  const scheduleId = Number(req.params.scheduleId);
+  if (schedules[scheduleId] === undefined) {
+    res.status(404).json(`Incorrect schedule id: ${scheduleId}`);
+  }
+  res.json(schedules[scheduleId]);
+});
+
+// POST a new schedule
+
+app.post('/schedules', (req, res) => {
+  const newSchedule = {
+    user_id: req.body.user_id,
+    day: req.body.day,
+    start_at: req.body.start_at,
+    end_at: req.body.end_at,
+  };
+
+  if (!newSchedule.user_id || !newSchedule.day || !newSchedule.start_at || !newSchedule.end_at) {
+    res.status(404).json('Please fill out all required fields');
+  }
+  schedules.push(newSchedule);
+  res.json(newSchedule);
+});
 
 app.listen(port, () => {
   console.log(`Started on PORT ${port}`);
 });
-
-// Będzie zwracać nowo utworzonego użytkownika.
-// Hasło użytkownika musi być zaszyfrowane w SHA256.
