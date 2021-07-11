@@ -1,9 +1,13 @@
+// TODO: Try most recommended way to add body-parser https://github.com/expressjs/body-parser
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const crypto = require('crypto');
 const data = require('./data');
 
 const app = express();
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.use(express.json());
 const port = 3000;
 const { users } = data; // previously: const users = data.users - fixed by eslint
@@ -45,17 +49,17 @@ app.post('/users', (req, res) => {
     res.status(404).json('Please fill out all required fields');
   }
 
-  // newUser.password = crypto.createHash('sha256')
-  //   .update('newUser.password')
-  //   .digest();
+  newUser.password = crypto.createHash('sha256')
+    .update('newUser.password')
+    .digest('hex');
 
-  function hashPassword() {
-    return crypto.createHash('sha256')
-      .update('newUser.password')
-      .digest('hex');
-  }
+  // function hashPassword(pwd) {
+  //   return crypto.createHash('sha256')
+  //     .update(pwd)
+  //     .digest('hex');
+  // }
 
-  hashPassword(newUser.password);
+  // hashPassword(newUser.password);
   users.push(newUser);
   res.json(newUser);
 });
